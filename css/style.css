@@ -1,5 +1,8 @@
 /* CUSTOM PROPERTIES */
 :root {
+    /* COMMON */
+    --avatar-container: 80px;
+
     /* COL LEFT */
     --header-left-height: 80px;
 
@@ -24,11 +27,45 @@ img {
     display: flex;
 }
 
+.avatar-container {
+    width: var(--avatar-container);
+    padding: 10px;
+}
+
+.circle-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.list-icon {
+    color: gray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+}
+
+.icon {
+    font-size: 25px;
+    color: rgb(177 177 177);
+}
+
 /* BODY */
 body {
     width: 100%;
     height: 100vh;
-    padding: 20px 150px;
+    padding: 20px 80px;
     /* Debug */
     background-color: brown;
 }
@@ -50,6 +87,7 @@ body {
 .main-col-left {
     width: 35%;
     height: 100%;
+    overflow-y: auto;
     /* Debug */
     background-color: gray; 
 }
@@ -57,8 +95,14 @@ body {
 /* Header LEFT */
 .header-left {
     height: var(--header-left-height);
-    /* Debug */
-    background-color: lightslategray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(234 234 234);
+}
+
+.nav-icon {
+    margin-right: 20px;
 }
 
 /* Main LEFT */
@@ -72,6 +116,7 @@ body {
 .main-col-right {
     width: 65%;
     height: 100%;
+    overflow-y: auto;
     /* Deug */
     background-color: blue;
 }
@@ -95,17 +140,22 @@ body {
     background-color: lightslategray;
 }
 
-/* Tablet Layout */
+/* Tablet Layout ----------------------------------------------- TABLET*/
 @media screen and (max-width: 768px) {
     .main-col-left {
-        width: 15%;
+        width: var(--avatar-container);
     }
+
+    .header-left .nav-icon {
+        display: none;
+    }
+
     .main-col-right {
-        width: 85%;
+        width: calc(100% - var(--avatar-container));
     }
 }
 
-/* Mobile Layout */
+/* Mobile Layout ------------------------------------------------- MOBILE*/
 @media screen and (max-width: 425px) {
     .main-col-left {
         display: none;

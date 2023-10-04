@@ -214,7 +214,36 @@ body {
 
 /* Main RIGHT */
 .main-right {
+    padding: 50px 100px 50px;
     height: calc(100% - (var(--header-right-height) + var(--footer-right-height)) + 4px);
+    overflow-y: auto;
+}
+
+.my-chat {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 10px;
+}
+
+.your-chat {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+}
+
+.my-chat p, .your-chat p {
+    padding: 20px 30px 30px 15px;
+    border-radius: 10px;
+}
+
+.my-chat p {
+    background-color: rgb(213 249 186);
+    width: 60%;
+}
+
+.your-chat p {
+    background-color: white;
+    width: 60%;
 }
 
 /* Footer RIGHT */
@@ -253,6 +282,10 @@ body {
     .chats-section .chat-text {
         display: none;
     }
+
+    .col-right .main-right {
+        padding: 30px;
+    }
 }
 
 /* Mobile Layout ------------------------------------------------- MOBILE*/
@@ -271,5 +304,9 @@ body {
 
     .footer-right button {
         display: none;
+    }
+
+    .main-right .my-chat p, .main-right .your-chat p {
+        width: 80%;
     }
 }

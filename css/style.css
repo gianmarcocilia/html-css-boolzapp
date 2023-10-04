@@ -87,7 +87,6 @@ body {
 .main-col-left {
     width: 35%;
     height: 100%;
-    overflow-y: auto;
     /* Debug */
     background-color: gray; 
 }
@@ -116,7 +115,6 @@ body {
 .main-col-right {
     width: 65%;
     height: 100%;
-    overflow-y: auto;
     /* Deug */
     background-color: blue;
 }

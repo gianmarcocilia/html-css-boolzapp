@@ -1,3 +1,13 @@
+/* CUSTOM PROPERTIES */
+:root {
+    /* COL LEFT */
+    --header-left-height: 80px;
+
+    /* COL RIGHT */
+    --header-right-height: 80px;
+    --footer-right-height: 80px;
+}
+
 /* RESET */
 * {
     margin: 0;
@@ -36,22 +46,56 @@ body {
     background-image: url(../img/mine.jpg);
 }
 
-/* Main col left */
+/* Main col LEFT SECTION ----------------------------------------- LEFT*/
 .main-col-left {
-    width: 30%;
+    width: 35%;
     height: 100%;
     /* Debug */
     background-color: gray; 
 }
 
-/* Main col right */
+/* Header LEFT */
+.header-left {
+    height: var(--header-left-height);
+    /* Debug */
+    background-color: lightslategray;
+}
+
+/* Main LEFT */
+.main-left {
+    height: calc(100% - var(--header-left-height));
+    /* Debug */
+    background-color: aqua;
+}
+
+/* Main col RIGHT SECTION ---------------------------------------- RIGHT*/
 .main-col-right {
-    width: 70%;
+    width: 65%;
     height: 100%;
     /* Deug */
     background-color: blue;
 }
 
+/* Header RIGHT */
+.header-right {
+    height: var(--header-right-height);
+    /* Debug */
+    background-color: gray;
+}
+
+/* Main RIGHT */
+.main-right {
+    height: calc(100% - (var(--header-right-height) + var(--footer-right-height)));
+}
+
+/* Footer RIGHT */
+.footer-right {
+    height: var(--footer-right-height);
+    /* Debug */
+    background-color: lightslategray;
+}
+
+/* Tablet Layout */
 @media screen and (max-width: 768px) {
     .main-col-left {
         width: 15%;
@@ -61,6 +105,7 @@ body {
     }
 }
 
+/* Mobile Layout */
 @media screen and (max-width: 425px) {
     .main-col-left {
         display: none;

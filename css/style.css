@@ -2,10 +2,13 @@
 :root {
     /* COMMON */
     --header-avatar-container: 80px;
+    --header-color:rgb(234 234 234);
+    --icon-color:rgb(177 177 177);
 
     /* COL LEFT */
     --header-left-height: 80px;
     --main-avatar-container: 90px;
+    --chat-color: rgb(255 255 255);
 
     /* COL RIGHT */
     --header-right-height: 80px;
@@ -58,7 +61,7 @@ button {
 
 .icon {
     font-size: 25px;
-    color: rgb(177 177 177);
+    color: var(--icon-color);
 }
 
 /* BODY */
@@ -98,7 +101,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(234 234 234);
+    background-color: var(--header-color);
 }
 
 .avatar-container {
@@ -158,7 +161,7 @@ body {
 .chats-section {
     height: 100%;
     overflow-y: auto;
-    background-color: rgb(255 255 255);
+    background-color: var(--chat-color);
     padding-top: 119px;
 }
 
@@ -179,25 +182,36 @@ body {
 .col-right {
     width: 65%;
     height: 100%;
-    /* Deug */
-    background-color: blue;
 }
 
 /* Header RIGHT */
 .header-right {
-    height: var(--header-right-height);
-    /* Debug */
-    background-color: gray;
+    height:calc(var(--header-right-height) - 1px);
+    background-color: var(--header-color);
+    border-left: 1px solid rgb(215 215 215);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right .chat-container {
+    border: 0;
+    padding: 10px;
+}
+
+.header-right .chat-container span {
+    color: rgb(137 128 129);
+    font-size: 13px;
 }
 
 /* Main RIGHT */
 .main-right {
-    height: calc(100% - (var(--header-right-height) + var(--footer-right-height)));
+    height: calc(100% - (var(--header-right-height) + var(--footer-right-height)) + 2px);
 }
 
 /* Footer RIGHT */
 .footer-right {
-    height: var(--footer-right-height);
+    height:calc(var(--footer-right-height) - 1px);
     /* Debug */
     background-color: lightslategray;
 }
@@ -237,5 +251,9 @@ body {
 
     .col-right {
         width: 100%;
+    }
+
+    .header-right .nav-icon {
+        display: none;
     }
 }

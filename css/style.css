@@ -76,8 +76,7 @@ body {
     height: 100vh;
     padding: 20px 80px;
     font-family: sans-serif;
-    /* Debug */
-    background-color: brown;
+    background: linear-gradient(rgb(0 150 136) 20%, rgb(218 219 212) 20% 80%);
 }
 
 @media screen and (max-width: 768px) {
@@ -228,8 +227,6 @@ body {
     padding: 0 25px;
     border-left: 1px solid rgb(215 215 215);
 }
-
-
 
 /* Tablet Layout ----------------------------------------------- TABLET*/
 @media screen and (max-width: 768px) {

@@ -83,8 +83,8 @@ body {
     background-image: url(../img/mine.jpg);
 }
 
-/* Main col LEFT SECTION ----------------------------------------- LEFT*/
-.main-col-left {
+/* Col LEFT SECTION --------------------------------------------- LEFT*/
+.col-left {
     width: 35%;
     height: 100%;
     /* Debug */
@@ -111,8 +111,8 @@ body {
     background-color: aqua;
 }
 
-/* Main col RIGHT SECTION ---------------------------------------- RIGHT*/
-.main-col-right {
+/* Col RIGHT SECTION -------------------------------------------- RIGHT*/
+.col-right {
     width: 65%;
     height: 100%;
     /* Deug */
@@ -140,7 +140,7 @@ body {
 
 /* Tablet Layout ----------------------------------------------- TABLET*/
 @media screen and (max-width: 768px) {
-    .main-col-left {
+    .col-left {
         width: var(--avatar-container);
     }
 
@@ -148,18 +148,18 @@ body {
         display: none;
     }
 
-    .main-col-right {
+    .col-right {
         width: calc(100% - var(--avatar-container));
     }
 }
 
 /* Mobile Layout ------------------------------------------------- MOBILE*/
 @media screen and (max-width: 425px) {
-    .main-col-left {
+    .col-left {
         display: none;
     }
 
-    .main-col-right {
+    .col-right {
         width: 100%;
     }
 }

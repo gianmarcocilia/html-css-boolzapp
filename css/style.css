@@ -13,7 +13,9 @@
     /* COL RIGHT */
     --header-right-height: 80px;
     --footer-right-height: 80px;
+    --footer-right-color: rgb(243 238 234);
     --icon-chat: rgb(126 123 120);
+    --border-left-col-right: rgb(215 215 215);
 }
 
 /* RESET */
@@ -72,15 +74,19 @@ button {
 
 /* BODY */
 body {
-    width: 100%;
-    height: 100vh;
-    padding: 20px 80px;
     font-family: sans-serif;
     background: linear-gradient(rgb(0 150 136) 20%, rgb(218 219 212) 20% 80%);
 }
 
+/* APP */
+.app {
+    width: 100%;
+    height: 100vh;
+    padding: 20px 80px;
+}
+
 @media screen and (max-width: 768px) {
-    body {
+    .app {
         padding: 0;
     }   
 }
@@ -96,8 +102,6 @@ body {
 .col-left {
     width: 35%;
     height: 100%;
-    /* Debug */
-    background-color: gray; 
 }
 
 /* Header LEFT */
@@ -193,7 +197,7 @@ body {
 .header-right {
     height:calc(var(--header-right-height) - 2px);
     background-color: var(--header-color);
-    border-left: 1px solid rgb(215 215 215);
+    border-left: 1px solid var(--border-left-col-right);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -249,17 +253,17 @@ body {
 /* Footer RIGHT */
 .footer-right {
     height:calc(var(--footer-right-height) - 2px);
-    background-color: rgb(243 238 234);
+    background-color: var(--footer-right-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
-    border-left: 1px solid rgb(215 215 215);
+    border-left: 1px solid var(--border-left-col-right);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
     .col-right .main-right {
-        padding: 30px;
+        padding: 50px 30px;
     }
 }
 
@@ -288,6 +292,10 @@ body {
     .chats-section .chat-text {
         display: none;
     }
+
+    .col-right .main-right {
+        padding: 30px;
+    }
 }
 
 /* Mobile Layout ------------------------------------------------- MOBILE*/
@@ -310,5 +318,9 @@ body {
 
     .main-right .my-chat p, .main-right .your-chat p {
         width: 80%;
+    }
+
+    .col-right .header-right, .col-right .footer-right {
+        border-left: none; 
     }
 }

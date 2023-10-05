@@ -286,7 +286,7 @@ body {
 
 @media screen and (max-width: 950px) {
     .col-right .main-right {
-        padding: 50px 30px;
+        padding: 50px 30px 15px;
     }
 }
 
@@ -313,7 +313,7 @@ body {
     }
 
     .col-right .main-right {
-        padding: 30px;
+        padding: 30px 30px 15px;
     }
 }
 

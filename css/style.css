@@ -1,9 +1,9 @@
 /* CUSTOM PROPERTIES */
 :root {
     /* COMMON */
-    --header-avatar-container: 80px;
     --header-color:rgb(234 234 234);
     --icon-color:rgb(177 177 177);
+    --avatar-width: 60px;
 
     /* COL LEFT */
     --col-left-width: 300px;
@@ -13,7 +13,7 @@
 
     /* COL RIGHT */
     --header-right-height: 80px;
-    --footer-right-height: 80px;
+    --footer-right-height: 70px;
     --footer-right-color: rgb(243 238 234);
     --icon-chat: rgb(126 123 120);
     --border-left-col-right: rgb(215 215 215);
@@ -40,8 +40,7 @@ a {
 }
 
 .circle-avatar {
-    width: 60px;
-    height: 60px;
+    width: var(--avatar-width);
     border-radius: 50%;
     object-fit: cover;
 }
@@ -115,7 +114,7 @@ body {
 }
 
 .avatar-container {
-    width: var(--header-avatar-container);
+    width: var(--header-left-height);
     padding: 10px;
 }
 
@@ -140,6 +139,7 @@ body {
 }
 
 .notify {
+    height: var(--avatar-width);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,7 +170,7 @@ body {
 }
 
 ::placeholder {
-    color: rgb(197 200 199);
+    color: rgb(146, 146, 146);
 }
 
 .research button {
@@ -199,7 +199,7 @@ body {
 }
 
 .chats-section p {
-    color: rgb(188 191 210);
+    color: rgb(204, 204, 204);
 }
 
 /* Col RIGHT SECTION -------------------------------------------- RIGHT*/
@@ -219,7 +219,7 @@ body {
 }
 
 .chat-name {
-    height: var(--header-avatar-container);
+    height: var(--header-right-height);
     display: flex;
     gap: 10px;
     align-items: center;
@@ -233,7 +233,7 @@ body {
 
 /* Main RIGHT */
 .main-right {
-    padding: 50px 100px 50px;
+    padding: 50px 100px 15px;
     height: calc(100% - (var(--header-right-height) + var(--footer-right-height)) + 4px);
     overflow-y: auto;
 }
@@ -269,10 +269,19 @@ body {
     height:calc(var(--footer-right-height) - 2px);
     background-color: var(--footer-right-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    gap: 15px;
     padding: 0 25px;
     border-left: 1px solid var(--border-left-col-right);
+}
+
+#write {
+    height: 65%;
+    width: 80%;
+    padding-left: 15px;
+    border: none;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 950px) {
@@ -332,5 +341,9 @@ body {
 
     .col-right .header-right, .col-right .footer-right {
         border-left: none; 
+    }
+
+    #write {
+        width: 100%;
     }
 }

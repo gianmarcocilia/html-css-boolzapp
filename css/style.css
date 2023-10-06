@@ -394,7 +394,12 @@ body {
     .col-right .main-right {
         padding: 50px 30px 15px;
     }
+
+    .footer-right #write {
+        width: 60%;
+    }
 }
+
 
 /* Tablet Layout ----------------------------------------------- TABLET*/
 @media screen and (max-width: 768px) {
@@ -420,6 +425,10 @@ body {
 
     .col-right .main-right {
         padding: 30px 0px 15px 20px;
+    }
+
+    .footer-right #write {
+        width: 70%;
     }
 }
 
@@ -451,7 +460,11 @@ body {
         border-left: none;
     }
 
-    #write {
+    .footer-right {
+        gap: 0;
+    }
+
+    .footer-right #write {
         width: 100%;
     }
 

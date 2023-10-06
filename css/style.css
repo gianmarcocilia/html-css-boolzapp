@@ -159,16 +159,23 @@ body {
     color: rgb(114 157 177);
 }
 
-.research {
+.research-control {
     background-color: rgb(250 250 250);
+    padding: 5px 10px;
+}
+
+.research {
+    display: flex;
+    background-color: white;
+    color: var(--icon-color);
     padding: 5px;
-    position: relative;
 }
 
 #search {
-    width: 100%;
-    padding: 6px 6px 6px 35px;
     border: none;
+    width: 100%;
+    padding-left: 5px;
+    outline: none;
 }
 
 ::placeholder {
